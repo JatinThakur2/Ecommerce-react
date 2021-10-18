@@ -1,16 +1,9 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+const functions = require("firebase-functions");
 
-admin.initializeApp();
-
-exports.lowercaseProductName = functions.firestore.document('/products/{documentId}')
-    .onCreate((snap, context) => {
-        const name = snap.data().name;
-
-        functions.logger.log('Lowercasing product name', context.params.documentId, name);
-
-        const lowercaseName = name.toLowerCase();
-
-        return snap.ref.set({ name_lower: lowercaseName }, { merge: true });
-    });
-
+// // Create and Deploy Your First Cloud Functions
+// // https://firebase.google.com/docs/functions/write-firebase-functions
+//
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//   functions.logger.info("Hello logs!", {structuredData: true});
+//   response.send("Hello from Firebase!");
+// });
