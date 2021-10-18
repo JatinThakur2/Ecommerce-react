@@ -2,14 +2,14 @@
   "name": "ecommerce-react",
   "version": "1.2.0",
   "main": "index.js",
-  "author": "Julius Guevarra",
+  "author": "Jatin Thakur",
   "keywords": [
     "react-webpack",
     "boilerplate",
     "react-webpack-boilerplate",
     "react-boilerplate"
   ],
-  "license": "MIT",
+  
   "scripts": {
     "serve": "live-server dist/",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
